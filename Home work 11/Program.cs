@@ -108,6 +108,8 @@ namespace Home_work_11
                 result = nameUser2;
                 ageRes = ageUser2 - ageUser1;
             }
+            
+           
 
             Console.Write($"Укажите имя пользователя который старше или ");
             Console.Write($"'{peers}'");
@@ -117,27 +119,26 @@ namespace Home_work_11
             while (msg != result)
             {
                 msg = Console.ReadLine();
-                if (msg == peers && ageRes==0)
+                 if (msg == peers && ageRes == 0)
                 {
                     Console.WriteLine("Да, они равесники.");
                     break;
-
                 }
-                else if (ageRes==0 && msg!=peers)
+               else if (ageRes == 0 && msg==nameUser2 || msg == nameUser1)
                 {
                     Console.WriteLine("Не правильно, они равесники.");
+                    break;
                 }
-                else if (ageUser1>ageUser2 && msg == nameUser2 || msg == peers)
+                else if (ageUser1 > ageUser2 && msg == nameUser2 || msg == peers)
                 {
                     Console.WriteLine($"Не правильный ответ. Пользователь {result} старше на {ageRes}.");
                     break;
                 }
-                else if (ageUser2>ageUser1 && msg == nameUser1 || msg == peers)
+                else if (ageUser2 > ageUser1 && msg == nameUser1 || msg == peers)
                 {
                     Console.WriteLine($"Не правильный ответ. Пользователь {result} старше на {ageRes}.");
                     break;
                 }
-
                 else if (msg == result)
                 {
                     Console.WriteLine($"Правильный ответ. Пользователь {result} старше на {ageRes}.");
@@ -146,7 +147,6 @@ namespace Home_work_11
                 else if (msg != result)
                 {
                     Console.WriteLine($"Такого пользователя нет, укажите точное имя.");
-                    break;
                 }
             }
             Console.ReadKey();
