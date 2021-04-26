@@ -124,7 +124,12 @@ namespace Home_work_11
                     Console.WriteLine("Да, они равесники.");
                     break;
                 }
-               else if (ageRes == 0 && msg==nameUser2 || msg == nameUser1)
+               else if (ageRes == 0 && msg==nameUser1)
+                {
+                    Console.WriteLine("Не правильно, они равесники.");
+                    break;
+                }
+                else if (ageRes == 0 && msg == nameUser2)
                 {
                     Console.WriteLine("Не правильно, они равесники.");
                     break;
